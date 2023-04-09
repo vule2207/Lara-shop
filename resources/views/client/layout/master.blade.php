@@ -2,12 +2,13 @@
 <html lang="zxx">
 
 <head>
+    <base href="{{asset('/')}}">
     <meta charset="UTF-8">
     <meta name="description" content="codelean Template">
     <meta name="keywords" content="codelean, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LARA-SHOP</title>
+    <title>@yield('title') | Lara Shop</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -182,8 +183,8 @@
 
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="index.blade.php">Home</a></li>   
-                        <li><a href="shop.html">Shop</a></li>
+                        <li class="active"><a href="/">Home</a></li>   
+                        <li><a href="products">Shop</a></li>
                         <li><a href="">Collection</a>
                             <ul class="dropdown">
                                 <li><a href="">Men's</a></li>
@@ -211,6 +212,9 @@
         </div>
     </header>
     {{-- header section end --}}
+
+    {{-- body here --}}
+    @yield('body')
 
     {{-- Partner Logo Section Begin --}}
     <div class="partner-logo">
