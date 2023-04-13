@@ -340,6 +340,7 @@
     <script src="assets/js/jquery.dd.min.js"></script>
     <script src="assets/js/jquery.slicknav.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/owlcarousel2-filter.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

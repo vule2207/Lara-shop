@@ -1,17 +1,18 @@
 <?php
 
-namespace App\Services\Product;
+namespace App\Services\ProductComment;
 
-use App\Repositories\Product\ProductRepositoryInterface;
+use App\Repositories\ProductComment\ProductCommentRepositoryInterface;
+use App\Services\ProductComment\ProductCommentServicesInterface;
 use App\Services\BaseServices;
 
-class ProductServices extends BaseServices implements ProductServicesInterface
+class ProductCommentServices extends BaseServices implements ProductCommentServicesInterface
 {
 	public $repository;
 
-	public function __construct(ProductRepositoryInterface $productRepository)
+	public function __construct(ProductCommentRepositoryInterface $productCommentRepository)
 	{
-		$this->repository = $productRepository;
+		$this->repository = $productCommentRepository;
 	}
 
 	public function find(int $id)
@@ -30,18 +31,5 @@ class ProductServices extends BaseServices implements ProductServicesInterface
 		$product->size = array_unique($size);
 		$product->avgRating = $avgRating;
 		return $product;
-	}
-
-	public function getRelatedProducts($product, $limit = 4)
-	{
-		return $this->repository->getRelatedProducts($product, $limit);
-	}
-
-	public function getFeaturedProducts()
-	{
-		return [
-			'men' => $this->repository->getFeaturedProductsByCategory(1),
-			'women' => $this->repository->getFeaturedProductsByCategory(2),
-		];
 	}
 }

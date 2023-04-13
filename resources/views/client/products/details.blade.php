@@ -243,7 +243,7 @@
                         <ul class="nav" role="tablist">
                             <li><a class="active" href="#tab-1" data-toggle="tab" role="tab">DESCRIPTION</a></li>
                             <li><a href="#tab-2" data-toggle="tab" role="tab">SPECIFICATIONS</a></li>
-                            <li><a href="#tab-3" data-toggle="tab" role="tab">Customer review (2)</a></li>
+                            <li><a href="#tab-3" data-toggle="tab" role="tab">Customer review ({{count($product->productComments)}})</a></li>
                         </ul>
                     </div>
                     <div class="tab-item-content">
@@ -349,30 +349,40 @@
                                             </div>
                                         @endforeach
                                     </div>
-        
-                                <div class="personal-rating">
-                                        <h6>Your Rating</h6>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                    </div>
-        
+
                                     <div class="leave-comment">
                                         <h4>Leave A Comment</h4>
-                                        <form action="" class="comment-form">
+                                        <form action="" method="post" class="comment-form">
+                                            @csrf
+                                            <input type="hidden" name="product_id" value="{{$product->id}}">
+                                            <input type="hidden" name="user_id" value="{{\Illuminate\Support\Facades\Auth::user()->id ?? null}}">
+
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <input type="text" placeholder="Name">
+                                                    <input type="text" name="name" placeholder="Name">
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <input type="text" placeholder="Email">
+                                                    <input type="text" name="email" placeholder="Email">
                                                 </div>
                                                 <div class="col-lg-12">
-                                                    <textarea placeholder="Messages"></textarea>
+                                                    <textarea name="messages" placeholder="Messages"></textarea>
+
+                                                    <div class="personal-rating">
+                                                        <h6>Your Rating</h6>
+                                                        <div class="rate">
+                                                            <input type="radio" id="star5" name="rating" value="5" />
+                                                            <label for="star5" title="text">5 stars</label>
+                                                            <input type="radio" id="star4" name="rating" value="4" />
+                                                            <label for="star4" title="text">4 stars</label>
+                                                            <input type="radio" id="star3" name="rating" value="3" />
+                                                            <label for="star3" title="text">3 stars</label>
+                                                            <input type="radio" id="star2" name="rating" value="2" />
+                                                            <label for="star2" title="text">2 stars</label>
+                                                            <input type="radio" id="star1" name="rating" value="1" />
+                                                            <label for="star1" title="text">1 star</label>
+                                                        </div>
+                                                    </div>
+
                                                     <button type="submit" class="site-btn">Send Messages</button>
                                                 </div>
                                             </div>
@@ -401,32 +411,43 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="assets/img/products/product-1.jpg" alt="">
-                        <div class="sale pp-sale">Sale</div>
-                        <div class="icon">
-                            <i class="icon_heart_alt"></i>
+            @foreach ($relatedProducts as $reProduct)
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img src="assets/img/products/{{$reProduct->productImages[0]->path}}" alt="">
+                            @if ($reProduct->discount != null)
+                                <div class="sale pp-sale">Sale</div>
+                            @endif
+                            <div class="icon">
+                                <i class="icon_heart_alt"></i>
+                            </div>
+                            <ul>
+                                <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
+                                <li class="quick-view"><a href="products/{{$reProduct->id}}">+ Quick View</a></li>
+                                <li class="w-icon"><a href=""><i class="fa fa-random"></i></a></li>
+                            </ul>
                         </div>
-                        <ul>
-                            <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                            <li class="quick-view"><a href="products">+ Quick View</a></li>
-                            <li class="w-icon"><a href=""><i class="fa fa-random"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="pi-text">
-                        <div class="catagory-name">Towel</div>
-                        <a href="#">
-                            <h5>Pure Pineapple</h5>
-                        </a>
-                        <div class="product-price">
-                            $14.00
-                            <span>$35.00</span>
+                        <div class="pi-text">
+                            <div class="catagory-name">{{ $reProduct->tag }}</div>
+                            <a href="products/{{$reProduct->id}}">
+                                <h5>{{ $reProduct->name }}</h5>
+                            </a>
+                            <div class="product-price">
+                                @if ($reProduct->discount != null)
+                                    ${{ $reProduct->discount }}
+                                @else
+                                    ${{ $reProduct->price }}
+                                @endif
+
+                                @if ($reProduct->discount != null)
+                                    <span>${{ $reProduct->price }}</span>
+                                @endif
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div>    
+            @endforeach
         </div>
     </div>
 </div>
