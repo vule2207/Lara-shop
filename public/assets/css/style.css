@@ -210,6 +210,7 @@ ol {
     left: 0;
     z-index: 999999;
     background: #000;
+    /* opacity: 0.6; */
 }
 
 .loader {
@@ -282,6 +283,10 @@ ol {
     outline: none;
     cursor: pointer;
     padding: 0 20px;
+}
+
+.ht-right .lan-selector .ddcommon .ddTitle .ddTitleText {
+    display: flex;
 }
 
 .ht-right .lan-selector .ddcommon .ddTitle .ddTitleText img {
@@ -1075,6 +1080,11 @@ ol {
     padding-left: 65px;
     padding-top: 0;
     padding-bottom: 80px;
+}
+
+.men-banner {
+    padding-right: 65px;
+    padding-left: 65px;
 }
 
 .product-large {
@@ -4025,6 +4035,10 @@ ol {
         margin-bottom: 30px;
     }
     .women-banner {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .men-banner {
         padding-right: 0;
         padding-left: 0;
     }

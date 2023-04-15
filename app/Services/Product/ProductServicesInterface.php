@@ -11,4 +11,6 @@ interface ProductServicesInterface extends ServicesInterface
 	public function getFeaturedProducts();
 
 	public function getProductOnIndex($request);
+
+	public function getProductsByCategory($categoryName, $request);
 }
