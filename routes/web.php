@@ -3,6 +3,7 @@
 use App\Http\Controllers\Client\ShopController;
 use App\Http\Controllers\Client\HomeController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+if (env('APP_ENV') !== 'local') {
+	URL::forceScheme('https');
+	URL::forceRootUrl(config('app.url'));
+}
 
 Route::get('/', [HomeController::class, 'index']);
 Route::prefix('shop')->group(function () {
