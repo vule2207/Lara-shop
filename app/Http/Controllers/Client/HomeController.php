@@ -21,9 +21,7 @@ class HomeController extends Controller
     public function index()
     {
         $featuredProducts = $this->productService->getFeaturedProducts();
-        $blog = $this->blogService->getLatestBlogs(3);
-
-        return view('client.index', compact('featuredProducts', 'blog'));
-        // dd($featuredProducts);
+        $blogs = $this->blogService->getLatestBlogs(3);
+        return view('client.index', compact('featuredProducts', 'blogs'));
     }
 }

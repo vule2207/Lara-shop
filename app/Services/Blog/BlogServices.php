@@ -16,6 +16,6 @@ class BlogServices extends BaseServices implements BlogServicesInterface
 
 	public function getLatestBlogs($limit = 3)
 	{
-		$this->repository->getLatestBlogs($limit);
+		return $this->repository->getLatestBlogs($limit);
 	}
 }

@@ -9,4 +9,6 @@ interface ProductServicesInterface extends ServicesInterface
 	public function getRelatedProducts($product, $limit = 4);
 
 	public function getFeaturedProducts();
+
+	public function getProductOnIndex($request);
 }

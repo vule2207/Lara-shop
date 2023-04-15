@@ -296,69 +296,29 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-latest-blog">
-                        <img src="assets/img/latest-1.jpg" alt="">
-                        <div class="latest-text">
-                            <div class="tag-list">
-                                <div class="tag-item">
-                                    <i class="fa fa-calendar-o"></i>
-                                    May 4,2023
+                @foreach ($blogs as $blog)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-latest-blog">
+                            <img src="assets/img/blog/{{$blog->image}}" alt="">
+                            <div class="latest-text">
+                                <div class="tag-list">
+                                    <div class="tag-item">
+                                        <i class="fa fa-calendar-o"></i>
+                                        {{date("M d, Y", strtotime($blog->created_at))}}
+                                    </div>
+                                    <div class="tag-item">
+                                        <i class="fa fa-comment-o"></i>
+                                        {{count($blog->blogComments)}}
+                                    </div>
+                                    <a href="blog/{{$blog->id}}">
+                                        <h4>{{$blog->title}}</h4>
+                                        <p>{{$blog->subtitle}}</p>
+                                    </a>
                                 </div>
-                                <div class="tag-item">
-                                    <i class="fa fa-comment-o"></i>
-                                    5
-                                </div>
-                                <a href="">
-                                    <h4>The Best Street Style From London</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-latest-blog">
-                        <img src="assets/img/latest-2.jpg" alt="">
-                        <div class="latest-text">
-                            <div class="tag-list">
-                                <div class="tag-item">
-                                    <i class="fa fa-calendar-o"></i>
-                                    May 4,2023
-                                </div>
-                                <div class="tag-item">
-                                    <i class="fa fa-comment-o"></i>
-                                    5
-                                </div>
-                                <a href="">
-                                    <h4>The Best Street Style From London</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-latest-blog">
-                        <img src="assets/img/latest-3.jpg" alt="">
-                        <div class="latest-text">
-                            <div class="tag-list">
-                                <div class="tag-item">
-                                    <i class="fa fa-calendar-o"></i>
-                                    May 4,2023
-                                </div>
-                                <div class="tag-item">
-                                    <i class="fa fa-comment-o"></i>
-                                    5
-                                </div>
-                                <a href="">
-                                    <h4>The Best Street Style From London</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </div>    
+                @endforeach
             </div>
             <div class="benefit-items">
                 <div class="row">

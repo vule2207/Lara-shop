@@ -20,9 +20,10 @@ class ShopController extends Controller
         $this->productCommentService = $productCommentService;
     }
 
-    public function allProduct()
+    public function allProduct(Request $request)
     {
-        $products = $this->productService->all();
+        // dd($request->all());
+        $products = $this->productService->getProductOnIndex($request);
         return view('client.products.products', compact('products'));
     }
 

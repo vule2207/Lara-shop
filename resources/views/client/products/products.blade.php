@@ -152,17 +152,23 @@
                     <div class="product-show-option">
                         <div class="row">
                             <div class="col-lg-7 col-md-7">
-                                <div class="select-option">
-                                    <select class="sorting">
-                                        <option value="">Default Sorting</option>
-                                    </select>
-                                    <select class="p-show">
-                                        <option value="">Show:</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-5 col-md-5 text-right">
-                                <p>Show 81-89 Of 36 Product</p>
+                                <form action="shop/products">
+                                    <div class="select-option">
+                                        <select name="sort_by" onchange="this.form.submit();" class="sorting">
+                                            <option {{request('sort_by') == 'latest' ? 'selected' : ''}} value="latest">Sorting: Latest</option>
+                                            <option {{request('sort_by') == 'oldest' ? 'selected' : ''}} value="oldest">Sorting: Oldest</option>
+                                            <option {{request('sort_by') == 'name-ascending' ? 'selected' : ''}} value="name-ascending">Sorting: Name A-Z</option>
+                                            <option {{request('sort_by') == 'name-descending' ? 'selected' : ''}} value="name-descending">Sorting: Name Z-A</option>
+                                            <option {{request('sort_by') == 'price-ascending' ? 'selected' : ''}} value="price-ascending">Sorting: Price Ascending</option>
+                                            <option {{request('sort_by') == 'price-descending' ? 'selected' : ''}} value="price-descending">Sorting: Price Descending</option>
+                                        </select>
+                                        <select name="show" onchange="this.form.submit();" class="p-show">
+                                            <option {{request('show') == '3' ? 'selected' : ''}} value="3">Show: 3</option>
+                                            <option {{request('show') == '9' ? 'selected' : ''}} value="9">Show: 9</option>
+                                            <option {{request('show') == '15' ? 'selected' : ''}} value="15">Show: 15</option>
+                                        </select>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -182,13 +188,13 @@
                                             </div>
                                             <ul>
                                                 <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                                <li class="quick-view"><a href="products/{{$product->id}}">+ Quick View</a></li>
+                                                <li class="quick-view"><a href="shop/products/{{$product->id}}">+ Quick View</a></li>
                                                 <li class="w-icon"><a href=""><i class="fa fa-random"></i></a></li>
                                             </ul>
                                         </div>
                                         <div class="pi-text">
                                             <div class="catagory-name">{{ $product->tag }}</div>
-                                            <a href="products/{{$product->id}}">
+                                            <a href="shop/products/{{$product->id}}">
                                                 <h5>{{ $product->name }}</h5>
                                             </a>
                                             <div class="product-price">
@@ -209,10 +215,12 @@
                         </div>
                     </div>
                 
-                    <div class="loading-more">
+                    {{-- <div class="loading-more">
                         <i class="icon_loading"></i>
                         <a href="#">Loading More</a>
-                    </div>
+                    </div> --}}
+
+                    {{$products->links()}}
                 </div>
             </div>
         </div>

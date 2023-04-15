@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/themify-icons.css" type="text/css">
@@ -84,19 +85,21 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
                         <div class="logo">
-                            <a href="#">
+                            <a href="/">
                                 <img src="assets/img/logo.png" height="25" alt="">
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-7">
-                        <div class="advanced-search">
-                            <button type="button" class="category-btn">All Categories</button>
-                            <div class="input-group">
-                                <input type="text" placeholder="What do you need?">
-                                <button type="button"><i class="ti-search"></i></button>
+                        <form action="shop/products">
+                            <div class="advanced-search">
+                                <button type="button" class="category-btn">All Categories</button>
+                                <div class="input-group">
+                                    <input name="search" value="{{request('search')}}" type="text" placeholder="What do you need?">
+                                    <button type="submit" ><i class="ti-search"></i></button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     <div class="col-lg-3 col-md-3 text-right">
                         <ul class="nav-right">
@@ -183,18 +186,18 @@
 
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="/">Home</a></li>   
-                        <li><a href="products">Shop</a></li>
-                        <li><a href="">Collection</a>
+                        <li class="{{(request()->segment(1) == '') ? 'active' : ''}}"><a href="/">Home</a></li>   
+                        <li class="{{(request()->segment(1) == 'shop') ? 'active' : ''}}"><a href="shop/products">Shop</a></li>
+                        <li class="{{(request()->segment(1) == 'collection') ? 'active' : ''}}"><a href="collection">Collection</a>
                             <ul class="dropdown">
                                 <li><a href="">Men's</a></li>
                                 <li><a href="">Women's</a></li>
                                 <li><a href="">Kid's</a></li>
                             </ul>
                         </li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Pages</a>
+                        <li class="{{(request()->segment(1) == 'blog') ? 'active' : ''}}"><a href="blog">Blog</a></li>
+                        <li class="{{(request()->segment(1) == 'contact') ? 'active' : ''}}"><a href="contact">Contact</a></li>
+                        <li class="{{(request()->segment(1) == 'pages') ? 'active' : ''}}"><a href="pages">Pages</a>
                             <ul class="dropdown">
                                 <li><a href="blog-details.html">Blog Details</a></li>
                                 <li><a href="shopping-cart.html">Shopping Cart</a></li>

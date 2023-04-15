@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('products', [ShopController::class, 'allProduct']);
-Route::get('products/{id}', [ShopController::class, 'productDetails']);
-Route::post('products/{id}', [ShopController::class, 'postComment']);
+Route::prefix('shop')->group(function () {
+	Route::get('products', [ShopController::class, 'allProduct']);
+	Route::get('products/{id}', [ShopController::class, 'productDetails']);
+	Route::post('products/{id}', [ShopController::class, 'postComment']);
+});
