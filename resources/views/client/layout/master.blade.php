@@ -15,15 +15,15 @@
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -334,17 +334,17 @@
     {{-- Footer section end --}}
 
     <!-- Js Plugins -->
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <script src="assets/js/jquery.countdown.min.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/jquery.zoom.min.js"></script>
-    <script src="assets/js/jquery.dd.min.js"></script>
-    <script src="assets/js/jquery.slicknav.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/owlcarousel2-filter.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery-ui.min.js"></script>
+    <script src="./assets/js/jquery.countdown.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.zoom.min.js"></script>
+    <script src="./assets/js/jquery.dd.min.js"></script>
+    <script src="./assets/js/jquery.slicknav.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/owlcarousel2-filter.min.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
