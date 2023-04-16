@@ -1,11 +1,14 @@
 
 {{-- {{ request()->segment(2) == 'product' ? 'shop' : ''}} --}}
 <form action="shop/products">
+    @csrf
   <div class="filter-widget">
       <h4 class="fw-title">Categories</h4>
       <ul class="filter-catagories">
           @foreach ($categories as $category)
-              <li><a href="shop/categories/{{ strtolower($category->name) }}">{{ $category->name }}</a></li>
+              	<li class="{{request()->segment(3) == strtolower($category->name) ? 'font-weight-bold' : ''}}">
+					<a href="shop/categories/{{ strtolower($category->name) }}">{{ $category->name }}</a>
+				</li>
           @endforeach
       </ul>
   </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Client\CartController;
 use App\Http\Controllers\Client\ShopController;
 use App\Http\Controllers\Client\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -22,9 +23,15 @@ if (env('APP_ENV') !== 'local') {
 }
 
 Route::get('/', [HomeController::class, 'index']);
+
 Route::prefix('shop')->group(function () {
 	Route::get('products', [ShopController::class, 'allProduct']);
 	Route::get('products/{id}', [ShopController::class, 'productDetails']);
 	Route::post('products/{id}', [ShopController::class, 'postComment']);
 	Route::get('categories/{categoryName}', [ShopController::class, 'category']);
+});
+
+Route::prefix('cart')->group(function () {
+	Route::get('/', [CartController::class, 'index']);
+	Route::get('add/{id}', [CartController::class, 'add']);
 });

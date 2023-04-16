@@ -92,6 +92,7 @@
                     </div>
                     <div class="col-lg-7 col-md-7">
                         <form action="{{ request()->url() }}">
+                            @csrf
                             <div class="advanced-search">
                                 <button type="button" class="category-btn">All Categories</button>
                                 <div class="input-group">
@@ -152,8 +153,8 @@
                                         <h5>$120.00</h5>
                                     </div>
                                     <div class="select-button">
-                                        <a href="shopping-cart.html" class="primaty-btn view-card">VIEW CARD</a>
-                                        <a href="check-out.html" class="primaty-btn checkout-btn">CHECK OUT</a>
+                                        <a href="cart" class="primaty-btn view-card">VIEW CARD</a>
+                                        <a href="check-out" class="primaty-btn checkout-btn">CHECK OUT</a>
                                     </div>
                                 </div>
                             </li>
@@ -190,9 +191,9 @@
                         <li class="{{(request()->segment(1) == 'shop') ? 'active' : ''}}"><a href="shop/products">Shop</a></li>
                         <li class="{{(request()->segment(1) == 'collection') ? 'active' : ''}}"><a href="collection">Collection</a>
                             <ul class="dropdown">
-                                <li><a href="">Men's</a></li>
-                                <li><a href="">Women's</a></li>
-                                <li><a href="">Kid's</a></li>
+                                <li><a href="shop/categories/men">Men's</a></li>
+                                <li><a href="shop/categories/women">Women's</a></li>
+                                <li><a href="shop/categories/kids">Kid's</a></li>
                             </ul>
                         </li>
                         <li class="{{(request()->segment(1) == 'blog') ? 'active' : ''}}"><a href="blog">Blog</a></li>
@@ -200,7 +201,7 @@
                         <li class="{{(request()->segment(1) == 'pages') ? 'active' : ''}}"><a href="pages">Pages</a>
                             <ul class="dropdown">
                                 <li><a href="blog-details.html">Blog Details</a></li>
-                                <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                                <li><a href="cart">Shopping Cart</a></li>
                                 <li><a href="check-out.html">Checkout</a></li>
                                 <li><a href="faq.html">Faq</a></li>
                                 <li><a href="register.html">Register</a></li>
@@ -306,6 +307,7 @@
                         <h5>Join Us Newsletter Now</h5>
                         <p>Get Email updates about our latest shop and special offers</p>
                         <form action="#" class="subscribe-form">
+                            @csrf
                             <input type="text" placeholder="Enter your email address">
                             <button type="button">Subscribe</button>
                         </form> 

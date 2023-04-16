@@ -34,6 +34,7 @@
                         <div class="row">
                             <div class="col-lg-7 col-md-7">
                                 <form action="{{ request()->url() }}">
+                                    @csrf
                                     <div class="select-option">
                                         <select name="sort_by" onchange="this.form.submit();" class="sorting">
                                             <option {{request('sort_by') == 'latest' ? 'selected' : ''}} value="latest">Sorting: Latest</option>

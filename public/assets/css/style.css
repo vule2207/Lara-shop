@@ -30,7 +30,10 @@
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
-
+:root {
+    --primary-text: #252525;
+    --secondary-text: #636363;
+}
 html,
 body {
     height: 100%;
@@ -78,7 +81,7 @@ h6 {
 p {
     font-size: 16px;
     font-family: "Muli", sans-serif;
-    color: #636363;
+    color: var(--secondary-text);
     font-weight: 400;
     line-height: 26px;
     margin: 0 0 15px 0;
@@ -130,7 +133,7 @@ ol {
 }
 
 .section-title h2 {
-    color: #252525;
+    color: var(--primary-text);
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 38px;
@@ -295,7 +298,7 @@ ol {
 
 .ht-right .lan-selector .ddcommon .ddTitle .ddTitleText span {
     font-size: 14px;
-    color: #252525;
+    color: var(--primary-text);
 }
 
 .ht-right .lan-selector .ddcommon .ddTitle .ddArrow:before {
@@ -351,7 +354,7 @@ ol {
 
 .header-top .ht-left .mail-service {
     font-size: 16px;
-    color: #252525;
+    color: var(--primary-text);
     float: left;
     border-right: 1px solid #e5e5e5;
     padding-top: 15px;
@@ -366,7 +369,7 @@ ol {
 .header-top .ht-left .phone-service {
     float: right;
     font-size: 14px;
-    color: #252525;
+    color: var(--primary-text);
     line-height: 27px;
     padding-top: 15px;
     padding-bottom: 12px;
@@ -384,7 +387,7 @@ ol {
 .header-top .ht-right .login-panel {
     float: right;
     font-size: 14px;
-    color: #252525;
+    color: var(--primary-text);
     display: inline-block;
     padding-left: 20px;
     border-left: 1px solid #e5e5e5;
@@ -411,7 +414,7 @@ ol {
 }
 
 .header-top .ht-right .top-social a {
-    color: #252525;
+    color: var(--primary-text);
     font-size: 14px;
     display: inline-block;
     margin-left: 15px;
@@ -444,7 +447,7 @@ ol {
     padding-bottom: 13px;
     padding-right: 60px;
     font-size: 16px;
-    color: #252525;
+    color: var(--primary-text);
     position: relative;
 }
 
@@ -506,7 +509,7 @@ ol {
 }
 
 .inner-header .nav-right li.heart-icon a {
-    color: #252525;
+    color: var(--primary-text);
     position: relative;
     display: inline-block;
 }
@@ -537,7 +540,7 @@ ol {
 }
 
 .inner-header .nav-right li.cart-icon a {
-    color: #252525;
+    color: var(--primary-text);
     position: relative;
     display: inline-block;
 }
@@ -642,7 +645,7 @@ ol {
     table
     tr
     td.si-close {
-    color: #252525;
+    color: var(--primary-text);
     font-size: 16px;
     cursor: pointer;
 }
@@ -690,11 +693,11 @@ ol {
 .inner-header .nav-right li.cart-price {
     font-size: 18px;
     font-weight: 700;
-    color: #252525;
+    color: var(--primary-text);
 }
 
 .nav-item {
-    background: #252525;
+    background: var(--primary-text);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -828,7 +831,7 @@ ol {
     top: 82px;
     width: 200px;
     z-index: 99;
-    background: #252525;
+    background: var(--primary-text);
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all 0.3s;
@@ -879,7 +882,7 @@ ol {
 }
 
 .hero-items .single-hero-items h1 {
-    color: #252525;
+    color: var(--primary-text);
     font-size: 72px;
     font-weight: 700;
     margin-bottom: 6px;
@@ -994,7 +997,7 @@ ol {
     position: absolute;
     left: 40px;
     top: 45%;
-    color: #252525;
+    color: var(--primary-text);
 }
 
 .hero-items .owl-nav button[type="button"]:hover {
@@ -1064,7 +1067,7 @@ ol {
 }
 
 .single-banner .inner-text h4 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     padding: 11px 28px;
     background: #ffffff;
@@ -1197,7 +1200,7 @@ ol {
 
 .product-slider .owl-dots button.active {
     width: 30px;
-    background: #252525;
+    background: var(--primary-text);
     border-radius: 50px;
 }
 
@@ -1240,7 +1243,7 @@ ol {
 
 .product-item .pi-pic .icon {
     font-size: 20px;
-    color: #252525;
+    color: var(--primary-text);
     position: absolute;
     right: 21px;
     top: -15px;
@@ -1276,7 +1279,7 @@ ol {
 .product-item .pi-pic ul li a {
     font-size: 16px;
     font-weight: 700;
-    color: #252525;
+    color: var(--primary-text);
     display: block;
     padding: 16px 18px 12px 19px;
 }
@@ -1300,7 +1303,7 @@ ol {
 }
 
 .product-item .pi-text a h5 {
-    color: #252525;
+    color: var(--primary-text);
 }
 
 .product-item .pi-text .product-price {
@@ -1480,7 +1483,7 @@ ol {
 }
 
 .single-latest-blog .latest-text a h4 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     line-height: 30px;
     margin-bottom: 16px;
@@ -1509,7 +1512,7 @@ ol {
 }
 
 .benefit-items .single-benefit .sb-text h6 {
-    color: #252525;
+    color: var(--primary-text);
     line-height: 20px;
     font-weight: 700;
     text-transform: uppercase;
@@ -1517,7 +1520,7 @@ ol {
 
 .benefit-items .single-benefit .sb-text p {
     margin-bottom: 0;
-    color: #252525;
+    color: var(--primary-text);
     line-height: 20px;
 }
 
@@ -1732,13 +1735,13 @@ ol {
 }
 
 .breadcrumb-text.product-more a:nth-child(1):after {
-    color: #252525;
+    color: var(--primary-text);
 }
 
 .breadcrumb-text a {
     display: inline-block;
     font-size: 16px;
-    color: #252525;
+    color: var(--primary-text);
     margin-right: 28px;
     position: relative;
 }
@@ -1772,7 +1775,7 @@ ol {
 }
 
 .filter-widget .fw-title {
-    color: #252525;
+    color: var(--primary-text);
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 26px;
@@ -1855,7 +1858,7 @@ ol {
 
 .filter-widget .filter-range-wrap .range-slider .price-input input {
     font-size: 16px;
-    color: #252525;
+    color: var(--primary-text);
     max-width: 20%;
     text-align: center;
     border: 1px solid #ebebeb;
@@ -1966,7 +1969,7 @@ ol {
     top: 4px;
     height: 18px;
     width: 18px;
-    background: #252525;
+    background: var(--primary-text);
     border-radius: 50%;
     content: "";
 }
@@ -1987,7 +1990,7 @@ ol {
 
 .filter-widget .fw-size-choose .sc-item label {
     font-size: 16px;
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     height: 40px;
     width: 47px;
@@ -1999,7 +2002,7 @@ ol {
 }
 
 .filter-widget .fw-size-choose .sc-item label.active {
-    background: #252525;
+    background: var(--primary-text);
     color: #ffffff;
 }
 
@@ -2075,7 +2078,7 @@ ol {
     top: 0;
     content: "09";
     font-size: 16px;
-    color: #252525;
+    color: var(--primary-text);
 } */
 
 .product-show-option p {
@@ -2104,7 +2107,7 @@ ol {
 .loading-more a {
     font-size: 18px;
     font-weight: 700;
-    color: #252525;
+    color: var(--primary-text);
     position: relative;
     display: inline-block;
 }
@@ -2210,12 +2213,12 @@ ol {
 }
 
 .product-details .pd-title h3 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
 }
 
 .product-details .pd-title .heart-icon {
-    color: #252525;
+    color: var(--primary-text);
     font-size: 18px;
     position: absolute;
     right: 0;
@@ -2265,7 +2268,7 @@ ol {
 }
 
 .product-details .pd-color h6 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     float: left;
     margin-right: 28px;
@@ -2288,7 +2291,7 @@ ol {
 .product-details .pd-color .pd-color-choose .cc-item label {
     height: 20px;
     width: 20px;
-    background: #252525;
+    background: var(--primary-text);
     border-radius: 50%;
     cursor: pointer;
     margin-bottom: 0;
@@ -2322,7 +2325,7 @@ ol {
 
 .product-details .pd-size-choose .sc-item label {
     font-size: 16px;
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     height: 40px;
     width: 47px;
@@ -2334,7 +2337,7 @@ ol {
 }
 
 .product-details .pd-size-choose .sc-item label.active {
-    background: #252525;
+    background: var(--primary-text);
     color: #ffffff;
 }
 
@@ -2394,7 +2397,7 @@ ol {
 }
 
 .product-details .pd-tags li span {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -2405,7 +2408,7 @@ ol {
 
 .product-details .pd-share .p-code {
     font-size: 16px;
-    color: #252525;
+    color: var(--primary-text);
     float: left;
 }
 
@@ -2415,7 +2418,7 @@ ol {
 
 .product-details .pd-share .pd-social a {
     display: inline-block;
-    color: #252525;
+    color: var(--primary-text);
     font-size: 14px;
     margin-left: 15px;
 }
@@ -2450,7 +2453,7 @@ ol {
 }
 
 .tab-item ul li a.active {
-    color: #252525;
+    color: var(--primary-text);
 }
 
 .tab-item ul li a.active:before {
@@ -2473,7 +2476,7 @@ ol {
 }
 
 .product-content h5 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     margin-bottom: 23px;
 }
@@ -2531,7 +2534,7 @@ ol {
 
 .specification-table table tr td .cart-add {
     font-size: 16px;
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -2602,7 +2605,7 @@ ol {
 }
 
 .customer-review-option .comment-option .co-item .avatar-text h5 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -2638,7 +2641,7 @@ ol {
 }
 
 .customer-review-option .personal-rating h6 {
-    color: #252525;
+    color: var(--primary-text);
 }
 
 .customer-review-option .personal-rating .rating i {
@@ -2716,7 +2719,7 @@ ol {
 
 .cart-table table tr th {
     font-size: 16px;
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     border-bottom: 1px solid #ebebeb;
     text-align: center;
@@ -2739,6 +2742,13 @@ ol {
 
 .cart-table table tr td.cart-pic {
     width: 21%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.cart-table table tr td.cart-pic img {
+    width: 150px;
+    height: 150px;
 }
 
 .cart-table table tr td.cart-title {
@@ -2746,7 +2756,7 @@ ol {
 }
 
 .cart-table table tr td.cart-title h5 {
-    color: #252525;
+    color: var(--primary-text);
 }
 
 .cart-table table tr td.p-price {
@@ -2811,7 +2821,7 @@ ol {
 
 .cart-table table tr td.close-td {
     font-size: 16px;
-    color: #252525;
+    color: var(--primary-text);
     width: 8%;
 }
 
@@ -2833,7 +2843,7 @@ ol {
 }
 
 .cart-buttons .up-cart {
-    color: #252525;
+    color: var(--primary-text);
     background: #f3f3f3;
     border: 2px solid #ebebeb;
     padding: 12px 20px 12px 20px;
@@ -2867,7 +2877,7 @@ ol {
     position: absolute;
     right: 0;
     top: 0;
-    color: #252525;
+    color: var(--primary-text);
     background: transparent;
     border: 1px solid transparent;
     padding: 13px 25px 10px 35px;
@@ -2886,7 +2896,7 @@ ol {
     list-style: none;
     font-size: 16px;
     font-weight: 700;
-    color: #252525;
+    color: var(--primary-text);
     text-transform: uppercase;
     overflow: hidden;
 }
@@ -2918,7 +2928,7 @@ ol {
     font-size: 14px;
     font-weight: 700;
     color: #ffffff;
-    background: #252525;
+    background: var(--primary-text);
     text-transform: uppercase;
     padding: 15px 25px 14px 25px;
     display: block;
@@ -2940,7 +2950,7 @@ ol {
 
 .checkout-content .content-btn,
 .checkout-content input {
-    color: #252525;
+    color: var(--primary-text);
     font-size: 16px;
     border: 2px solid #ebebeb;
     padding: 14px 20px;
@@ -2954,13 +2964,13 @@ ol {
 }
 
 .checkout-form h4 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     margin-bottom: 30px;
 }
 
 .checkout-form label {
-    color: #252525;
+    color: var(--primary-text);
     font-size: 16px;
     margin-bottom: 5px;
 }
@@ -2991,7 +3001,7 @@ ol {
     padding-left: 32px;
     margin-bottom: 0;
     font-size: 14px;
-    color: #252525;
+    color: var(--primary-text);
 }
 
 .checkout-form .create-item label input {
@@ -3040,7 +3050,7 @@ ol {
 
 .checkout-form .place-order .order-total .order-table li {
     list-style: none;
-    color: #252525;
+    color: var(--primary-text);
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
@@ -3082,7 +3092,7 @@ ol {
     padding-left: 32px;
     margin-bottom: 0;
     font-size: 14px;
-    color: #252525;
+    color: var(--primary-text);
 }
 
 .checkout-form .place-order .order-total .payment-check .pc-item label input {
@@ -3164,7 +3174,7 @@ ol {
 }
 
 .blog-sidebar .search-form h4 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     margin-bottom: 12px;
 }
@@ -3187,8 +3197,8 @@ ol {
     right: 0;
     top: 0;
     color: #ffffff;
-    background: #252525;
-    border: 1px solid #252525;
+    background: var(--primary-text);
+    border: 1px solid var(--primary-text);
     height: 46px;
     padding: 0 15px;
     cursor: pointer;
@@ -3199,7 +3209,7 @@ ol {
 }
 
 .blog-sidebar .blog-catagory h4 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     margin-bottom: 14px;
 }
@@ -3219,7 +3229,7 @@ ol {
 }
 
 .blog-sidebar .recent-post h4 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     margin-bottom: 28px;
 }
@@ -3245,7 +3255,7 @@ ol {
 }
 
 .blog-sidebar .recent-post .recent-blog .rb-item .rb-text h6 {
-    color: #252525;
+    color: var(--primary-text);
     line-height: 24px;
     font-weight: 700;
     margin-bottom: 10px;
@@ -3269,7 +3279,7 @@ ol {
 }
 
 .blog-sidebar .blog-tags h4 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -3298,7 +3308,7 @@ ol {
 }
 
 .blog-item .bi-text h4 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     line-height: 30px;
     margin-bottom: 16px;
@@ -3336,7 +3346,7 @@ ol {
 }
 
 .blog-details-inner .blog-detail-title h2 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     margin-bottom: 15px;
 }
@@ -3399,7 +3409,7 @@ ol {
     float: left;
     font-size: 60px;
     text-transform: uppercase;
-    color: #252525;
+    color: var(--primary-text);
     margin-top: 14px;
     margin-right: 10px;
 }
@@ -3410,7 +3420,7 @@ ol {
 
 .blog-details-inner .blog-quote p {
     position: relative;
-    color: #252525;
+    color: var(--primary-text);
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
@@ -3533,7 +3543,7 @@ ol {
 
 .blog-details-inner .blog-post .prev-blog .pb-text h5 {
     font-size: 20px;
-    color: #252525;
+    color: var(--primary-text);
     line-height: 26px;
     font-weight: 700;
     margin-top: 10px;
@@ -3576,7 +3586,7 @@ ol {
 
 .blog-details-inner .blog-post .next-blog .nb-text h5 {
     font-size: 20px;
-    color: #252525;
+    color: var(--primary-text);
     line-height: 26px;
     font-weight: 700;
     margin-top: 10px;
@@ -3602,7 +3612,7 @@ ol {
 }
 
 .blog-details-inner .posted-by .pb-text a h5 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     margin-bottom: 13px;
 }
@@ -3692,7 +3702,7 @@ ol {
 }
 
 .contact-title h4 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     margin-bottom: 16px;
 }
@@ -3730,7 +3740,7 @@ ol {
 
 .contact-widget .cw-item .ci-text p {
     font-size: 18px;
-    color: #252525;
+    color: var(--primary-text);
     margin-bottom: 0;
 }
 
@@ -3788,7 +3798,7 @@ ol {
 
 .faq-accordin .card .card-heading {
     font-size: 22px;
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     cursor: pointer;
 }
@@ -3846,7 +3856,7 @@ ol {
 
 .register-form h2,
 .login-form h2 {
-    color: #252525;
+    color: var(--primary-text);
     font-weight: 700;
     text-align: center;
     margin-bottom: 35px;
@@ -3861,7 +3871,7 @@ ol {
 .login-form form .group-input label {
     display: block;
     font-size: 18px;
-    color: #252525;
+    color: var(--primary-text);
     margin-bottom: 13px;
 }
 
@@ -3891,7 +3901,7 @@ ol {
 
 .register-form .switch-login .or-login,
 .login-form .switch-login .or-login {
-    color: #252525;
+    color: var(--primary-text);
     font-size: 14px;
     letter-spacing: 2px;
     text-transform: uppercase;
